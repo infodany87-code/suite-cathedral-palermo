@@ -120,18 +120,27 @@ font-size:14px;
 
 .whatsapp-float{
 position:fixed;
-bottom:20px;
+bottom:24px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 18px;
+padding:14px 18px;
 border-radius:50px;
 font-weight:bold;
 text-decoration:none;
-...
 box-shadow:0 8px 20px rgba(0,0,0,0.4);
+z-index:999;
 }
-
+  
+@media (max-width:700px){
+.whatsapp-float{
+bottom:18px;
+right:16px;
+padding:12px 16px;
+font-size:14px;
+}
+}
+  
 .tagline{
 max-width:720px;
 margin:12px auto 0;
