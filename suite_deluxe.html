@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suite Cathedral Palermo — Suite Deluxe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9a96e;
+    --gold-light: #e8d5b0;
+    --cream: #faf7f2;
+    --dark: #1a1612;
+    --mid: #4a3f35;
+    --light-mid: #8a7a6e;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* LANG TOGGLE */
+  .lang-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 24px;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(201,169,110,0.2);
+  }
+  .lang-btn {
+    background: none;
+    border: 1px solid var(--gold);
+    color: var(--mid);
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .lang-btn:hover, .lang-btn.active {
+    background: var(--gold);
+    color: var(--white);
+  }
+  .lang-btn + .lang-btn { margin-left: 6px; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px 40px 80px;
+    position: relative;
+    background: linear-gradient(160deg, #2c1f14 0%, #1a1612 60%, #0d0b09 100%);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 27.5 L30 50 L5 27.5Z' fill='none' stroke='%23c9a96e' stroke-width='0.3' opacity='0.15'/%3E%3C/svg%3E") repeat;
+    opacity: 0.4;
+  }
+  .hero-ornament {
+    position: absolute;
+    top: 80px; left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    opacity: 0.6;
+  }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-tag {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 10vw, 72px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 4vw, 26px);
+    font-style: italic;
+    color: var(--gold-light);
+    margin-bottom: 32px;
+  }
+  .hero-address {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+  }
+  .hero-scroll {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .hero-scroll::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  /* SECTION BASE */
+  section { padding: 80px 32px; }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 6vw, 44px);
+    font-weight: 300;
+    color: var(--dark);
+    margin-bottom: 32px;
+    line-height: 1.2;
+  }
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 20px 0 32px;
+  }
+
+  /* WELCOME */
+  .welcome {
+    background: var(--white);
+    border-top: 1px solid rgba(201,169,110,0.2);
+  }
+  .welcome-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 4vw, 24px);
+    font-style: italic;
+    color: var(--mid);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .welcome-text {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--light-mid);
+    max-width: 600px;
+  }
+
+  /* PALAZZO */
+  .palazzo {
+    background: linear-gradient(135deg, #1a1612 0%, #2c1f14 100%);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .palazzo::before {
+    content: '';
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 300px; height: 300px;
+    border: 1px solid rgba(201,169,110,0.15);
+    border-radius: 50%;
+  }
+  .palazzo::after {
+    content: '';
+    position: absolute;
+    right: -20px; top: -20px;
+    width: 200px; height: 200px;
+    border: 1px solid rgba(201,169,110,0.1);
+    border-radius: 50%;
+  }
+  .palazzo .section-title { color: var(--white); }
+  .palazzo-text {
+    font-size: 14px;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.65);
+    position: relative; z-index: 2;
+  }
+  .palazzo-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(80px, 20vw, 160px);
+    font-weight: 300;
+    color: rgba(201,169,110,0.08);
+    position: absolute;
+    bottom: -20px; right: -10px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  /* ACCESS CARD */
+  .access { background: var(--cream); }
+  .access-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .info-card {
+    background: var(--white);
+    border: 1px solid rgba(201,169,110,0.25);
+    padding: 24px;
+    position: relative;
+  }
+  .info-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--gold);
+  }
+  .info-card-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .info-card-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--dark);
+    word-break: break-all;
+  }
+  .info-card-note {
+    font-size: 11px;
+    color: var(--light-mid);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+  .access-full { grid-column: 1 / -1; }
+
+  /* ZTL */
+  .ztl-block {
+    background: var(--dark);
+    color: var(--white);
+    padding: 24px;
+    margin-top: 8px;
+  }
+  .ztl-block .info-card-label { color: var(--gold); }
+  .ztl-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+  }
+  .ztl-row:last-child { border-bottom: none; }
+  .ztl-day { font-weight: 400; color: var(--gold-light); }
+
+  /* SERVICES */
+  .services { background: var(--white); }
+  .services-grid {
+    display: grid;
+    gap: 1px;
+    background: rgba(201,169,110,0.15);
+  }
+  .service-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(201,169,110,0.15);
+  }
+  .service-item {
+    background: var(--white);
+    padding: 24px;
+  }
+  .service-item-icon {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .service-item-title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .service-item-desc {
+    font-size: 12px;
+    color: var(--light-mid);
+    line-height: 1.6;
+  }
+  .service-paid { background: #fdf9f4; }
+  .service-request { background: #f7f4f0; }
+
+  /* RULES */
+  .rules { background: var(--cream); }
+  .rules-list {
+    list-style: none;
+  }
+  .rules-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(201,169,110,0.15);
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.7;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .rules-list li::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* SHUTTLE */
+  .shuttle { background: linear-gradient(135deg, #1a1612, #2c1f14); color: var(--white); }
+  .shuttle .section-title { color: var(--white); }
+  .shuttle-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .shuttle-price span {
+    font-size: 20px;
+    vertical-align: super;
+  }
+  .shuttle-details {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 32px;
+    line-height: 1.8;
+  }
+  .shuttle-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .shuttle-cta:hover {
+    background: var(--gold);
+    color: var(--dark);
+  }
+
+  /* GASTRONOMY */
+  .gastro { background: var(--white); }
+  .gastro-category {
+    margin-bottom: 40px;
+  }
+  .gastro-cat-title {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(201,169,110,0.2);
+    margin-bottom: 16px;
+  }
+  .gastro-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px dotted rgba(201,169,110,0.15);
+  }
+  .gastro-name {
+    font-size: 14px;
+    color: var(--dark);
+    font-weight: 400;
+  }
+  .gastro-note {
+    font-size: 11px;
+    color: var(--light-mid);
+    font-style: italic;
+  }
+  .gastro-phone {
+    font-size: 12px;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+  .gastro-phone:hover { text-decoration: underline; }
+  .michelin-star {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 11px;
+    margin-left: 4px;
+  }
+
+  /* TOURS */
+  .tours { background: var(--cream); }
+  .tour-card {
+    background: var(--white);
+    border: 1px solid rgba(201,169,110,0.2);
+    padding: 28px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  .tour-card:hover { transform: translateY(-2px); }
+  .tour-tag {
+    position: absolute;
+    top: 20px; right: 20px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,169,110,0.4);
+    padding: 4px 10px;
+  }
+  .tour-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--dark);
+    margin-bottom: 8px;
+    padding-right: 80px;
+  }
+  .tour-desc {
+    font-size: 12px;
+    color: var(--light-mid);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .tour-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 11px;
+    color: var(--mid);
+  }
+  .tour-meta span::before {
+    content: attr(data-label) ' ';
+    color: var(--gold);
+  }
+
+  /* SHOPPING */
+  .shopping { background: var(--white); }
+  .shop-zone {
+    margin-bottom: 32px;
+  }
+  .shop-zone-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+  .shop-zone-desc {
+    font-size: 12px;
+    color: var(--light-mid);
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  .shop-link {
+    font-size: 11px;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  .shop-link:hover { text-decoration: underline; }
+  .brands-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .brand-tag {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--mid);
+    border: 1px solid rgba(201,169,110,0.3);
+    padding: 4px 10px;
+  }
+
+  /* TRANSPORT */
+  .transport { background: var(--cream); }
+  .transport-note {
+    background: var(--white);
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  /* CONTACTS */
+  .contacts {
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+  }
+  .contacts .section-title { color: var(--white); }
+  .contacts .section-label { justify-content: center; display: block; }
+  .contacts .divider { margin: 20px auto 32px; }
+  .contact-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .contact-card {
+    border: 1px solid rgba(201,169,110,0.25);
+    padding: 28px 20px;
+  }
+  .contact-role {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .contact-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .contact-cta {
+    display: block;
+    background: var(--gold);
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  .contact-cta:hover { opacity: 0.85; }
+  .footer-note {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.8;
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  /* LANG VISIBILITY */
+  [data-lang="en"] { display: none; }
+  body.en [data-lang="it"] { display: none; }
+  body.en [data-lang="en"] { display: block; }
+  body.en [data-lang-inline="en"] { display: inline; }
+  body.en [data-lang-inline="it"] { display: none; }
+  [data-lang-inline="en"] { display: none; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-content { animation: fadeUp 1.2s ease forwards; }
+
+  @media (max-width: 480px) {
+    section { padding: 60px 20px; }
+    .access-grid { grid-template-columns: 1fr; }
+    .service-row { grid-template-columns: 1fr; }
+    .contact-cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('it')">IT</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-ornament" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="60" cy="60" r="55" stroke="#c9a96e" stroke-width="0.5" opacity="0.6"/>
+    <circle cx="60" cy="60" r="42" stroke="#c9a96e" stroke-width="0.5" opacity="0.4"/>
+    <path d="M60 10 L110 60 L60 110 L10 60 Z" stroke="#c9a96e" stroke-width="0.5" opacity="0.5"/>
+    <path d="M60 25 L95 60 L60 95 L25 60 Z" stroke="#c9a96e" stroke-width="0.3" opacity="0.4"/>
+    <circle cx="60" cy="60" r="5" stroke="#c9a96e" stroke-width="0.5" opacity="0.8"/>
+  </svg>
+  <div class="hero-content">
+    <p class="hero-tag">Suite Cathedral Palermo · Palazzo Asmundo 1615</p>
+    <h1 class="hero-title">Suite<br>Deluxe</h1>
+    <p class="hero-subtitle" data-lang-inline="it">Benvenuto nel cuore di Palermo</p>
+    <p class="hero-subtitle" data-lang-inline="en">Welcome to the heart of Palermo</p>
+    <p class="hero-address">Via Vittorio Emanuele, 492 · Palermo</p>
+    <div class="hero-scroll">
+      <span data-lang-inline="it">Scorri per scoprire</span>
+      <span data-lang-inline="en">Scroll to discover</span>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section class="welcome">
+  <p class="section-label">01 — <span data-lang-inline="it">Benvenuto</span><span data-lang-inline="en">Welcome</span></p>
+  <div data-lang="it">
+    <p class="welcome-intro">Sei ospite di un luogo straordinario.</p>
+    <div class="divider"></div>
+    <p class="welcome-text">Il tuo Suite Deluxe si trova all'interno di Palazzo Asmundo, uno dei palazzi storici più preziosi del centro antico di Palermo. Siamo qui per rendere il tuo soggiorno memorabile. Per qualsiasi necessità, siamo a tua disposizione.</p>
+  </div>
+  <div data-lang="en">
+    <p class="welcome-intro">You are a guest of an extraordinary place.</p>
+    <div class="divider"></div>
+    <p class="welcome-text">Your Suite Deluxe is located inside Palazzo Asmundo, one of the most precious historic palaces in the ancient heart of Palermo. We are here to make your stay unforgettable. For any need, we are at your disposal.</p>
+  </div>
+</section>
+
+<!-- PALAZZO -->
+<section class="palazzo">
+  <p class="section-label">02 — Palazzo Asmundo</p>
+  <div data-lang="it">
+    <h2 class="section-title">Dal 1615<br>al vostro soggiorno</h2>
+    <div class="divider" style="background: var(--gold);"></div>
+    <p class="palazzo-text">La costruzione dell'edificio risale al 1615, ma fu ultimato solo nel 1767. L'edificio, prima che ne venisse in possesso il Presidente di Giustizia Giuseppe Asmundo, marchese di Sessa, era appartenuto alla famiglia Joppolo dei Principi di S. Elia.<br><br>Stucchi di scuola serpottiana, porte barocche, affreschi di Gioacchino Martorana, l'alcova settecentesca con i suoi putti e i suoi tralci. Un vero scrigno d'arte che custodisce la "Palermo Felicissima" tanto amata dai viaggiatori di ieri e di oggi.<br><br>Visita la mostra permanente: <strong style="color: var(--gold-light);">Ingresso su Via Pietro Novelli 3</strong><br><a href="https://www.palazzoasmundo.com" style="color: var(--gold); font-size: 12px; letter-spacing: 1px;">www.palazzoasmundo.com</a></p>
+  </div>
+  <div data-lang="en">
+    <h2 class="section-title">From 1615<br>to your stay</h2>
+    <div class="divider" style="background: var(--gold);"></div>
+    <p class="palazzo-text">The building's construction dates to 1615, completed only in 1767. Before passing to Justice President Giuseppe Asmundo, Marquis of Sessa, it belonged to the Joppolo family, Princes of St. Elijah.<br><br>Serpottian stuccoes, Baroque doors, frescoes by Gioacchino Martorana, an eighteenth-century alcove with cherubs and vines. A genuine treasure chest of art preserving the "Palermo Felicissima" so beloved by travellers then and now.<br><br>Visit the permanent exhibition: <strong style="color: var(--gold-light);">Entrance at Via Pietro Novelli 3</strong><br><a href="https://www.palazzoasmundo.com" style="color: var(--gold); font-size: 12px; letter-spacing: 1px;">www.palazzoasmundo.com</a></p>
+  </div>
+  <div class="palazzo-year">1615</div>
+</section>
+
+<!-- ACCESS -->
+<section class="access">
+  <p class="section-label">03 — <span data-lang-inline="it">Accesso</span><span data-lang-inline="en">Access</span></p>
+  <div data-lang="it"><h2 class="section-title">Entrare<br>nel tuo spazio</h2></div>
+  <div data-lang="en"><h2 class="section-title">Entering<br>your space</h2></div>
+  <div class="divider"></div>
+
+  <div class="access-grid">
+    <div class="info-card">
+      <p class="info-card-label"><span data-lang-inline="it">Interno / Citofono</span><span data-lang-inline="en">Flat / Intercom</span></p>
+      <p class="info-card-value">N° 14</p>
+      <p class="info-card-note" data-lang="it">Usa questo numero anche per il citofono</p>
+      <p class="info-card-note" data-lang="en">Use this number also for the intercom</p>
+    </div>
+    <div class="info-card">
+      <p class="info-card-label"><span data-lang-inline="it">Codice Accesso</span><span data-lang-inline="en">Access Code</span></p>
+      <p class="info-card-value">225511</p>
+      <p class="info-card-note" data-lang="it">Tasto chiave → codice → tasto chiave</p>
+      <p class="info-card-note" data-lang="en">Key button → code → key button</p>
+    </div>
+    <div class="info-card">
+      <p class="info-card-label">Wi-Fi Network</p>
+      <p class="info-card-value" style="font-size: 16px;">SUITE DELUXE</p>
+    </div>
+    <div class="info-card">
+      <p class="info-card-label">Wi-Fi Password</p>
+      <p class="info-card-value" style="font-size: 16px;">Palermo492</p>
+    </div>
+    <div class="info-card access-full">
+      <p class="info-card-label"><span data-lang-inline="it">Apertura dall'interno</span><span data-lang-inline="en">Opening from inside</span></p>
+      <p class="info-card-note" style="font-size: 13px;" data-lang="it">Premi il pulsante cerchiato in <strong style="color: var(--gold);">GIALLO</strong> dall'interno per aprire il portone principale</p>
+      <p class="info-card-note" style="font-size: 13px;" data-lang="en">Press the button circled in <strong style="color: var(--gold);">YELLOW</strong> from the inside to open the main door</p>
+    </div>
+  </div>
+
+  <!-- ZTL -->
+  <div class="ztl-block">
+    <p class="info-card-label">ZTL — <span data-lang-inline="it">Zona a Traffico Limitato</span><span data-lang-inline="en">Limited Traffic Zone</span></p>
+    <div class="ztl-row">
+      <span class="ztl-day" data-lang="it">Lunedì — Giovedì</span>
+      <span class="ztl-day" data-lang="en">Monday — Thursday</span>
+      <span>08:00 – 20:00</span>
+    </div>
+    <div class="ztl-row">
+      <span class="ztl-day" data-lang="it">Venerdì</span>
+      <span class="ztl-day" data-lang="en">Friday</span>
+      <span>08:00 – 24:00</span>
+    </div>
+    <div class="ztl-row">
+      <span class="ztl-day" data-lang="it">Sabato (notturna)</span>
+      <span class="ztl-day" data-lang="en">Saturday (night)</span>
+      <span>00:00–06:00 / 20:00–24:00</span>
+    </div>
+    <div class="ztl-row">
+      <span class="ztl-day" data-lang="it">Domenica (notturna)</span>
+      <span class="ztl-day" data-lang="en">Sunday (night)</span>
+      <span>00:00 – 06:00</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <p class="section-label">04 — <span data-lang-inline="it">Servizi</span><span data-lang-inline="en">Services</span></p>
+  <div data-lang="it"><h2 class="section-title">Cosa è incluso,<br>cosa puoi richiedere</h2></div>
+  <div data-lang="en"><h2 class="section-title">What's included,<br>what you can request</h2></div>
+  <div class="divider"></div>
+
+  <div class="services-grid">
+    <div class="service-row">
+      <div class="service-item">
+        <div class="service-item-icon">✦</div>
+        <p class="service-item-title" data-lang="it">Servizi gratuiti</p>
+        <p class="service-item-title" data-lang="en">Free services</p>
+        <p class="service-item-desc" data-lang="it">Wi-Fi · Kit asciugamani (3 pz a persona, cambio settimanale) · Set lenzuola (cambio settimanale) · Climatizzatore · Luce, acqua, gas</p>
+        <p class="service-item-desc" data-lang="en">Wi-Fi · Towel kit (3 pcs per person, weekly change) · Sheet set (weekly change) · Air conditioning · Utilities</p>
+      </div>
+      <div class="service-item service-paid">
+        <div class="service-item-icon">◇</div>
+        <p class="service-item-title" data-lang="it">Pulizia finale</p>
+        <p class="service-item-title" data-lang="en">Final cleaning</p>
+        <p class="service-item-desc" data-lang="it">€ 35,00 (settimanale) · € 5,00/giorno per soggiorni più brevi. Facoltativo, da comunicare prima della partenza. La cucina va lasciata pulita dagli ospiti.</p>
+        <p class="service-item-desc" data-lang="en">€ 35.00 (weekly) · € 5.00/day for shorter stays. Optional — advise before departure. Kitchen must be left clean by guests.</p>
+      </div>
+    </div>
+    <div class="service-row">
+      <div class="service-item service-request">
+        <div class="service-item-icon">○</div>
+        <p class="service-item-title" data-lang="it">Check-out tardivo</p>
+        <p class="service-item-title" data-lang="en">Late check-out</p>
+        <p class="service-item-desc" data-lang="it">Check-out standard: ore <strong>10:00</strong>. Su richiesta è possibile il late check-out in tarda mattinata, pomeriggio o serata. Supplemento in base all'orario.</p>
+        <p class="service-item-desc" data-lang="en">Standard check-out: <strong>10:00 am</strong>. Late check-out available on request: late morning, afternoon or evening. Supplement based on time.</p>
+      </div>
+      <div class="service-item">
+        <div class="service-item-icon">⊡</div>
+        <p class="service-item-title" data-lang="it">Animali domestici</p>
+        <p class="service-item-title" data-lang="en">Pets</p>
+        <p class="service-item-desc" data-lang="it">1 cane ammesso per alloggio (salvo diverso accordo). Supplemento sanificazione variabile. In caso di danni: addebito a fine soggiorno.</p>
+        <p class="service-item-desc" data-lang="en">1 dog allowed per flat (unless otherwise agreed). Variable sanitisation surcharge. Damage costs charged at end of stay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RULES -->
+<section class="rules">
+  <p class="section-label">05 — <span data-lang-inline="it">Regole della casa</span><span data-lang-inline="en">House rules</span></p>
+  <div data-lang="it"><h2 class="section-title">Per il rispetto<br>di tutti</h2></div>
+  <div data-lang="en"><h2 class="section-title">For everyone's<br>comfort</h2></div>
+  <div class="divider"></div>
+  <ul class="rules-list" data-lang="it">
+    <li>Rispettare il silenzio nelle ore di riposo: <strong>14:00–16:00</strong> e <strong>23:00–09:00</strong></li>
+    <li>È severamente vietato fumare negli spazi interni. Posacenere disponibili all'esterno.</li>
+    <li>È vietato organizzare feste o eventi senza autorizzazione</li>
+    <li>Non è consentito l'ingresso a persone non dichiarate alla prenotazione</li>
+    <li>La lavatrice è riservata alla biancheria personale degli ospiti — non lavare la biancheria della struttura</li>
+    <li>Evitare l'uso simultaneo di più elettrodomestici ad alto consumo (forno, lavatrice, climatizzatore, scaldabagno)</li>
+    <li>In caso di interruzione elettrica: verificare i contatori nell'armadio a muro a destra del portone d'ingresso</li>
+    <li>Suite Cathedral Palermo non è responsabile per furti o smarrimento di oggetti lasciati all'interno</li>
+  </ul>
+  <ul class="rules-list" data-lang="en">
+    <li>Respect quiet hours: <strong>2:00–4:00 pm</strong> and <strong>11:00 pm–9:00 am</strong></li>
+    <li>Smoking is strictly prohibited indoors. Ashtrays available outside.</li>
+    <li>Parties or events without authorisation are forbidden</li>
+    <li>Entry is prohibited to persons not declared at the time of booking</li>
+    <li>The washing machine is for guests' personal laundry only — do not wash the property's linens</li>
+    <li>Avoid simultaneous use of high-consumption appliances (oven, washing machine, A/C, water heater)</li>
+    <li>In case of power outage: check the meters in the wooden cabinet to the right of the entrance door</li>
+    <li>Suite Cathedral Palermo is not responsible for theft or loss of items left inside the property</li>
+  </ul>
+</section>
+
+<!-- SHUTTLE -->
+<section class="shuttle">
+  <p class="section-label">06 — <span data-lang-inline="it">Transfer Aeroportuale</span><span data-lang-inline="en">Airport Transfer</span></p>
+  <div data-lang="it"><h2 class="section-title">Arrivals & Departures<br>in privato</h2></div>
+  <div data-lang="en"><h2 class="section-title">Arrivals & Departures<br>in private</h2></div>
+  <div class="divider" style="background: var(--gold);"></div>
+
+  <div class="shuttle-price"><span>€</span>65</div>
+  <p class="shuttle-details" data-lang="it">Tariffa one-way · Max 4 persone · +€15,00 dalle 22:00 alle 06:00<br>Disponibile 24h su 24, 7 giorni su 7 · Durata ~30 minuti<br>Punto di incontro: Suite Cathedral Palermo (o da concordare)</p>
+  <p class="shuttle-details" data-lang="en">One-way rate · Max 4 people · +€15.00 from 10pm to 6am<br>Available 24/7 · Duration ~30 minutes<br>Meeting point: Suite Cathedral Palermo (or to be agreed)</p>
+  <a href="https://wa.me/393282431315" class="shuttle-cta">
+    <span data-lang-inline="it">Prenota ora su WhatsApp</span>
+    <span data-lang-inline="en">Book now on WhatsApp</span>
+    →
+  </a>
+</section>
+
+<!-- GASTRONOMY -->
+<section class="gastro">
+  <p class="section-label">07 — <span data-lang-inline="it">Gastronomia</span><span data-lang-inline="en">Gastronomy</span></p>
+  <div data-lang="it"><h2 class="section-title">I sapori<br>di Palermo</h2></div>
+  <div data-lang="en"><h2 class="section-title">The flavours<br>of Palermo</h2></div>
+  <div class="divider"></div>
+
+  <div class="gastro-category">
+    <p class="gastro-cat-title">Bar · Bakery · Gelateria</p>
+    <div class="gastro-item"><span class="gastro-name">Bar Marocco <span class="gastro-note" data-lang="it">davanti alla struttura</span><span class="gastro-note" data-lang="en">in front of the building</span></span><a class="gastro-phone" href="tel:+390916511904">091 651 1904</a></div>
+    <div class="gastro-item"><span class="gastro-name">I Segreti del Chiostro <span class="gastro-note" data-lang="it">all'interno di un monastero</span><span class="gastro-note" data-lang="en">inside a monastery</span></span><a class="gastro-phone" href="tel:+393275882302">327 588 2302</a></div>
+    <div class="gastro-item"><span class="gastro-name">Morettino Caffè</span><a class="gastro-phone" href="tel:+393388747094">338 874 7094</a></div>
+    <div class="gastro-item"><span class="gastro-name">Pasticceria Costa Quattro Canti</span><a class="gastro-phone" href="tel:+390919807927">091 980 7927</a></div>
+  </div>
+
+  <div class="gastro-category">
+    <p class="gastro-cat-title"><span data-lang-inline="it">Ristoranti</span><span data-lang-inline="en">Restaurants</span></p>
+    <div class="gastro-item"><span class="gastro-name">Asmundo Bistro <span class="gastro-note">Palazzo Asmundo</span></span><a class="gastro-phone" href="tel:+390912143250">091 214325</a></div>
+    <div class="gastro-item"><span class="gastro-name">A'Cuncuma <span class="gastro-note" data-lang="it">Ristorante Siciliano</span><span class="gastro-note" data-lang="en">Sicilian Restaurant</span></span><a class="gastro-phone" href="tel:+393925214219">392 521 4219</a></div>
+    <div class="gastro-item"><span class="gastro-name">Bisso Bistrot Quattro Canti</span><a class="gastro-phone" href="tel:+393281314595">328 131 4595</a></div>
+    <div class="gastro-item"><span class="gastro-name">Locanda del Gusto</span><a class="gastro-phone" href="tel:+390913264980">091 326498</a></div>
+    <div class="gastro-item"><span class="gastro-name">Ristorante La Galleria</span><a class="gastro-phone" href="tel:+390912515037">091 251 5037</a></div>
+    <div class="gastro-item"><span class="gastro-name">Retrobottega di Prezzemolo & Vitale</span><a class="gastro-phone" href="tel:+390917466442">091 746 6442</a></div>
+  </div>
+
+  <div class="gastro-category">
+    <p class="gastro-cat-title">Ristoranti Luxury · Michelin</p>
+    <div class="gastro-item"><span class="gastro-name">MEC Restaurant<span class="michelin-star">✦ Michelin</span></span><a class="gastro-phone" href="tel:+393477532005">347 753 2005</a></div>
+    <div class="gastro-item"><span class="gastro-name">Ristorante Gagini<span class="michelin-star">✦ Michelin</span></span><a class="gastro-phone" href="tel:+390915899180">091 589918</a></div>
+    <div class="gastro-item"><span class="gastro-name">L'Ottava Nota</span><a class="gastro-phone" href="tel:+390916168601">091 616 8601</a></div>
+    <div class="gastro-item"><span class="gastro-name">Giunta Ristorante Citysea <span class="gastro-note">Molo Trapezoidale</span></span><a class="gastro-phone" href="tel:+390916859939">091 685 9939</a></div>
+  </div>
+
+  <div class="gastro-category">
+    <p class="gastro-cat-title">Pizzerie</p>
+    <div class="gastro-item"><span class="gastro-name">Caddia Condivisioni Culinarie</span><a class="gastro-phone" href="tel:+393336848017">333 684 8017</a></div>
+    <div class="gastro-item"><span class="gastro-name">Procopio Pizzeria</span><a class="gastro-phone" href="tel:+390919761024">091 976 1024</a></div>
+    <div class="gastro-item"><span class="gastro-name">Timilia</span><a class="gastro-phone" href="tel:+390917846088">091 784 6088</a></div>
+    <div class="gastro-item"><span class="gastro-name">Mastunicola</span><a class="gastro-phone" href="tel:+393274461820">327 446 1820</a></div>
+  </div>
+
+  <div class="gastro-category">
+    <p class="gastro-cat-title">Street Food Sicily</p>
+    <div class="gastro-item"><span class="gastro-name">Antica Focacceria San Francesco</span><a class="gastro-phone" href="tel:+390913202640">091 320264</a></div>
+    <div class="gastro-item"><span class="gastro-name">Nni Franco U Vastiddaru</span><a class="gastro-phone" href="tel:+390913259870">091 325987</a></div>
+    <div class="gastro-item"><span class="gastro-name">Testagrossa Focacceria</span><a class="gastro-phone" href="tel:+390914267770">091 426777</a></div>
+    <div class="gastro-item"><span class="gastro-name">Nino u Ballerino</span><a class="gastro-phone" href="tel:+393396950106">339 695 0106</a></div>
+  </div>
+
+  <div class="gastro-category">
+    <p class="gastro-cat-title">Pub & Drink</p>
+    <div class="gastro-item"><span class="gastro-name">Mak Mixology</span><a class="gastro-phone" href="tel:+390916745668">091 674 5668</a></div>
+    <div class="gastro-item"><span class="gastro-name">Le Terrazze del Sole</span><a class="gastro-phone" href="tel:+390913232610">091 323261</a></div>
+    <div class="gastro-item"><span class="gastro-name">Plaza Pretoria</span><a class="gastro-phone" href="tel:+393921804879">392 180 4879</a></div>
+    <div class="gastro-item"><span class="gastro-name">Beer & Co</span><a class="gastro-phone" href="tel:+390917288556">091 728 8556</a></div>
+  </div>
+
+  <div class="gastro-category">
+    <p class="gastro-cat-title">Supermercati · Market</p>
+    <div class="gastro-item"><span class="gastro-name">LIDL</span><a class="gastro-phone" href="tel:+39800480048">800 480 048 <span style="color: var(--light-mid); font-size: 11px;">— chiude 22:00</span></a></div>
+    <div class="gastro-item"><span class="gastro-name">Famila Supermercato</span><a class="gastro-phone" href="tel:+390916110322">091 611 0322 <span style="color: var(--light-mid); font-size: 11px;">— chiude 21:00</span></a></div>
+  </div>
+</section>
+
+<!-- TOURS -->
+<section class="tours">
+  <p class="section-label">08 — <span data-lang-inline="it">Esperienze & Tour</span><span data-lang-inline="en">Experiences & Tours</span></p>
+  <div data-lang="it"><h2 class="section-title">Palermo<br>da vivere</h2></div>
+  <div data-lang="en"><h2 class="section-title">Palermo<br>to experience</h2></div>
+  <div class="divider"></div>
+
+  <div class="tour-card">
+    <span class="tour-tag" data-lang="it">Ingresso libero</span><span class="tour-tag" data-lang="en">Free access</span>
+    <p class="tour-name" data-lang="it">La Cattedrale di Palermo</p>
+    <p class="tour-name" data-lang="en">Palermo Cathedral</p>
+    <p class="tour-desc" data-lang="it">A pochi passi da te. L'area monumentale (Tetti, Tombe Reali, Cripta, Absidi, Tesoro) richiede biglietto. Acquisto online o in biglietteria.</p>
+    <p class="tour-desc" data-lang="en">Steps away from you. The monumental area (Roofs, Royal Tombs, Crypt, Apses, Treasury) requires a ticket. Purchase online or at the box office.</p>
+    <div class="tour-meta">
+      <span data-label="Lun–Sab">09:30 – 19:00</span>
+      <span data-label="Dom">10:00 – 19:00</span>
+    </div>
+  </div>
+
+  <div class="tour-card">
+    <span class="tour-tag">UNESCO</span>
+    <p class="tour-name" data-lang="it">Palazzo dei Normanni & Cappella Palatina</p>
+    <p class="tour-name" data-lang="en">Norman Palace & Palatine Chapel</p>
+    <p class="tour-desc" data-lang="it">La più antica residenza reale d'Europa. Mosaici normanni di straordinaria bellezza. Audioguida disponibile a partire da €8,50.</p>
+    <p class="tour-desc" data-lang="en">The oldest royal residence in Europe. Extraordinary Norman mosaics. Audio guide available from €8.50.</p>
+    <div class="tour-meta">
+      <span data-label="Lun–Gio">08:30 – 14:30</span>
+      <span data-label="Ven–Sab">08:30 – 16:30</span>
+      <span data-label="Dom">08:30 – 12:30</span>
+    </div>
+  </div>
+
+  <div class="tour-card">
+    <span class="tour-tag" data-lang="it">Il più grande d'Italia</span><span class="tour-tag" data-lang="en">Largest in Italy</span>
+    <p class="tour-name">Teatro Massimo</p>
+    <p class="tour-desc" data-lang="it">Terzo teatro d'opera d'Europa per dimensioni, primo per acustica. Tour guidati ogni giorno. Accesso al palcoscenico su prenotazione (+€5,00).</p>
+    <p class="tour-desc" data-lang="en">Third largest opera house in Europe, first for acoustics. Guided tours daily. Stage access by reservation (+€5.00).</p>
+    <div class="tour-meta">
+      <span data-label="Tutti i giorni">09:30 – 17:30</span>
+      <span data-label="Adulti">€8,00</span>
+      <span data-label="Under 26">€5,00</span>
+    </div>
+  </div>
+
+  <div class="tour-card">
+    <p class="tour-name" data-lang="it">City Sightseeing Bus</p>
+    <p class="tour-name" data-lang="en">City Sightseeing Bus</p>
+    <p class="tour-desc" data-lang="it">Hop On Hop Off. Linea A (Centro Storico) · Linea B (zona Liberty, Castello della Zisa) · Monreale. Biglietteria diretta: chiedi a noi.</p>
+    <p class="tour-desc" data-lang="en">Hop On Hop Off. Line A (Historic Centre) · Line B (Liberty area, Zisa Castle) · Monreale. Direct ticketing available through us.</p>
+    <div class="tour-meta">
+      <span data-label="A+B">€ 20,00</span>
+      <span data-label="A+B+Monreale">€ 25,00</span>
+      <span data-label="9–15 anni">€ 10,00</span>
+    </div>
+  </div>
+
+  <div class="tour-card">
+    <span class="tour-tag" data-lang="it">Su richiesta</span><span class="tour-tag" data-lang="en">On request</span>
+    <p class="tour-name" data-lang="it">Tour privato a piedi — Arte, Storia & Tradizioni</p>
+    <p class="tour-name" data-lang="en">Private walking tour — Art, History & Traditions</p>
+    <p class="tour-desc" data-lang="it">3 ore nel cuore antico con guida privata. Un melting pot unico al mondo per ricchezza culturale. Punto di incontro: Cattedrale. Min. 2 persone.</p>
+    <p class="tour-desc" data-lang="en">3 hours in the ancient heart with a private guide. A melting pot unique in the world for cultural richness. Meeting point: Cathedral. Min. 2 people.</p>
+    <div class="tour-meta">
+      <span data-label="Durata">3h</span>
+      <span data-label="Tariffa">Da €75,00/pax</span>
+    </div>
+  </div>
+
+  <div class="tour-card">
+    <span class="tour-tag" data-lang="it">Su richiesta</span><span class="tour-tag" data-lang="en">On request</span>
+    <p class="tour-name" data-lang="it">Tour letterario — I luoghi dei Florio</p>
+    <p class="tour-name" data-lang="en">Literary tour — The Florio Family</p>
+    <p class="tour-desc" data-lang="it">Tra i vicoli della Palermo dei Florio, la famiglia diventata leggenda e ispiratrice del romanzo di Stefania Auci. Punto di incontro: Piazza Marina.</p>
+    <p class="tour-desc" data-lang="en">Through the alleys of Florio-era Palermo, the family who became legend and inspired Stefania Auci's bestselling novel. Meeting point: Piazza Marina.</p>
+    <div class="tour-meta">
+      <span data-label="Durata">2h</span>
+    </div>
+  </div>
+
+  <div class="tour-card">
+    <span class="tour-tag" data-lang="it">Su richiesta</span><span class="tour-tag" data-lang="en">On request</span>
+    <p class="tour-name" data-lang="it">Apetour — Itinerario UNESCO in motoape</p>
+    <p class="tour-name" data-lang="en">Apetour — UNESCO itinerary by tuk-tuk</p>
+    <p class="tour-desc" data-lang="it">L'itinerario Arabo-Normanno a bordo di una simpatica motoape. Con guida turistica disponibile (+€90,00). Max 3 persone. Punto di incontro: Cattedrale.</p>
+    <p class="tour-desc" data-lang="en">The Arab-Norman UNESCO itinerary aboard a charming tuk-tuk. With tour guide available (+€90.00). Max 3 people. Meeting point: Cathedral.</p>
+    <div class="tour-meta">
+      <span data-label="Durata">1h 30min</span>
+      <span data-label="Tariffa">Da €80,00</span>
+      <span data-label="Con guida">€170,00</span>
+    </div>
+  </div>
+
+  <div class="tour-card">
+    <span class="tour-tag" data-lang="it">Su richiesta</span><span class="tour-tag" data-lang="en">On request</span>
+    <p class="tour-name" data-lang="it">Tour in barca con skipper</p>
+    <p class="tour-name" data-lang="en">Boat tour with skipper</p>
+    <p class="tour-desc" data-lang="it">Mezza giornata lungo le coste palermitane. Max 6 persone. Punto di incontro da concordare.</p>
+    <p class="tour-desc" data-lang="en">Half day along the coasts of Palermo. Max 6 people. Meeting point to be agreed.</p>
+    <div class="tour-meta">
+      <span data-label="Durata" data-lang="it">Mezza giornata</span>
+      <span data-label="Duration" data-lang="en">Half day</span>
+      <span data-label="Tariffa">Da €150,00</span>
+    </div>
+  </div>
+
+  <div style="margin-top: 16px; padding: 20px; background: var(--white); border: 1px solid rgba(201,169,110,0.2);">
+    <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;">Transfers privati</p>
+    <div class="gastro-item"><span class="gastro-name">Mondello Beach</span><span style="font-size: 13px; color: var(--gold);">€ 55,00</span></div>
+    <div class="gastro-item"><span class="gastro-name">Cefalù</span><span style="font-size: 13px; color: var(--gold);">€ 105,00</span></div>
+    <div class="gastro-item"><span class="gastro-name">Taormina</span><span style="font-size: 13px; color: var(--gold);">€ 450,00</span></div>
+    <div class="gastro-item"><span class="gastro-name">Siracusa</span><span style="font-size: 13px; color: var(--gold);">€ 450,00</span></div>
+    <p style="font-size: 11px; color: var(--light-mid); margin-top: 12px;" data-lang="it">Tutti i transfer sono one-way · Max 4 persone · Chiedi disponibilità e ritorno</p>
+    <p style="font-size: 11px; color: var(--light-mid); margin-top: 12px;" data-lang="en">All transfers are one-way · Max 4 people · Ask about availability and return</p>
+  </div>
+</section>
+
+<!-- SHOPPING -->
+<section class="shopping">
+  <p class="section-label">09 — Shopping</p>
+  <div data-lang="it"><h2 class="section-title">Fare shopping<br>a Palermo</h2></div>
+  <div data-lang="en"><h2 class="section-title">Shopping<br>in Palermo</h2></div>
+  <div class="divider"></div>
+
+  <div class="shop-zone">
+    <h3 class="shop-zone-title" data-lang="it">Shopping Luxury — Via della Libertà</h3>
+    <h3 class="shop-zone-title" data-lang="en">Luxury Shopping — Via della Libertà</h3>
+    <p class="shop-zone-desc" data-lang="it">Il cuore dello shopping di lusso palermitano. Louis Vuitton, Prada, Gucci, MaxMara, Hogan, Boss, Tommy Hilfiger, Fay, Falconeri, Elisabetta Franchi, Pinko e molti altri.</p>
+    <p class="shop-zone-desc" data-lang="en">The heart of Palermo's luxury shopping. Louis Vuitton, Prada, Gucci, MaxMara, Hogan, Boss, Tommy Hilfiger, Fay, Falconeri, Elisabetta Franchi, Pinko and many more.</p>
+    <div class="brands-row">
+      <span class="brand-tag">Louis Vuitton</span><span class="brand-tag">Prada</span><span class="brand-tag">Gucci</span><span class="brand-tag">MaxMara</span><span class="brand-tag">Hogan</span><span class="brand-tag">Boss</span><span class="brand-tag">Pinko</span><span class="brand-tag">Falconeri</span><span class="brand-tag">Fay</span>
+    </div>
+  </div>
+
+  <div class="shop-zone">
+    <h3 class="shop-zone-title" data-lang="it">Shopping & Moda — Via Ruggero Settimo</h3>
+    <h3 class="shop-zone-title" data-lang="en">Fashion & Shopping — Via Ruggero Settimo</h3>
+    <p class="shop-zone-desc" data-lang="it">La principale via commerciale del centro. Brand internazionali e boutique locali.</p>
+    <p class="shop-zone-desc" data-lang="en">The main commercial street in the centre. International brands and local boutiques.</p>
+  </div>
+
+  <div class="shop-zone">
+    <h3 class="shop-zone-title" data-lang="it">Rinascente & Terrazze — Via Roma 289</h3>
+    <h3 class="shop-zone-title" data-lang="en">Rinascente & Terraces — Via Roma 289</h3>
+    <p class="shop-zone-desc" data-lang="it">Grande magazzino multimarca con vista sulla Cattedrale dalle terrazze panoramiche. Da non perdere.</p>
+    <p class="shop-zone-desc" data-lang="en">Multi-brand department store with cathedral views from the panoramic terraces. Not to be missed.</p>
+  </div>
+
+  <div class="shop-zone">
+    <h3 class="shop-zone-title">Forum Palermo</h3>
+    <p class="shop-zone-desc" data-lang="it">Centro commerciale con fontana danzante. La fontana si esibisce ogni ora dalle 18:00 alle 21:00 (fino alle 23:00 dal venerdì alla domenica).</p>
+    <p class="shop-zone-desc" data-lang="en">Shopping centre with dancing fountain. The fountain performs every hour from 6pm to 9pm (until 11pm Friday to Sunday).</p>
+    <p style="font-size: 11px; color: var(--light-mid);">Lun–Dom · 09:00–21:00</p>
+  </div>
+</section>
+
+<!-- TRANSPORT -->
+<section class="transport">
+  <p class="section-label">10 — <span data-lang-inline="it">Trasporti</span><span data-lang-inline="en">Transport</span></p>
+  <div data-lang="it"><h2 class="section-title">Muoversi<br>in città</h2></div>
+  <div data-lang="en"><h2 class="section-title">Getting around<br>the city</h2></div>
+  <div class="divider"></div>
+
+  <div class="transport-note" data-lang="it">La struttura si trova nel cuore del centro storico, a pochi minuti a piedi da tutti i principali monumenti. Per i trasporti pubblici, consulta la mappa AMAT: <a href="https://www.amat.pa.it" style="color: var(--gold);">www.amat.pa.it</a> · Tel 848 800 817</div>
+  <div class="transport-note" data-lang="en">The property is located in the heart of the historic centre, a few minutes' walk from all major monuments. For public transport, see the AMAT map: <a href="https://www.amat.pa.it" style="color: var(--gold);">www.amat.pa.it</a> · Tel 848 800 817</div>
+
+  <div class="info-card" style="border: 1px solid rgba(201,169,110,0.25);">
+    <p class="info-card-label" data-lang="it">Differenziata — Orari esposizione rifiuti</p>
+    <p class="info-card-label" data-lang="en">Recycling — Waste collection schedule</p>
+    <div class="ztl-row" style="color: var(--mid);">
+      <span>Lunedì / Monday</span><span style="font-size: 11px;">Residuo non riciclabile</span>
+    </div>
+    <div class="ztl-row" style="color: var(--mid);">
+      <span>Martedì / Tuesday</span><span style="font-size: 11px;">Carta, cartoncino, cartone</span>
+    </div>
+    <div class="ztl-row" style="color: var(--mid);">
+      <span>Mercoledì / Wednesday</span><span style="font-size: 11px;">Organico</span>
+    </div>
+    <div class="ztl-row" style="color: var(--mid);">
+      <span>Giovedì / Thursday</span><span style="font-size: 11px;">Residuo non riciclabile</span>
+    </div>
+    <div class="ztl-row" style="color: var(--mid);">
+      <span>Venerdì / Friday</span><span style="font-size: 11px;">Organico</span>
+    </div>
+    <div class="ztl-row" style="color: var(--mid);">
+      <span>Sabato / Saturday</span><span style="font-size: 11px;">—</span>
+    </div>
+    <div class="ztl-row" style="color: var(--mid);">
+      <span>Domenica / Sunday</span><span style="font-size: 11px;">Vetro / Organico / Plastica–Metallo</span>
+    </div>
+    <p style="font-size: 11px; color: var(--light-mid); margin-top: 12px;" data-lang="it">I rifiuti vanno esposti dalle 19:00 alle 22:00. Ritiro dal giorno successivo dalle 05:00 alle 14:00.</p>
+    <p style="font-size: 11px; color: var(--light-mid); margin-top: 12px;" data-lang="en">Waste must be put out between 7pm and 10pm. Collection from the following day between 5am and 2pm.</p>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts">
+  <p class="section-label">11 — <span data-lang-inline="it">Siamo qui per te</span><span data-lang-inline="en">We're here for you</span></p>
+  <div data-lang="it"><h2 class="section-title">Contattaci<br>in qualsiasi momento</h2></div>
+  <div data-lang="en"><h2 class="section-title">Contact us<br>any time</h2></div>
+  <div class="divider"></div>
+
+  <div class="contact-cards">
+    <div class="contact-card">
+      <p class="contact-role">Host</p>
+      <p class="contact-name">Daniele</p>
+      <a class="contact-cta" href="https://wa.me/393282431315">WhatsApp →</a>
+    </div>
+    <div class="contact-card">
+      <p class="contact-role">Support</p>
+      <p class="contact-name">Laura</p>
+      <a class="contact-cta" href="https://wa.me/393888044411">WhatsApp →</a>
+    </div>
+  </div>
+
+  <div class="footer-brand">Suite Cathedral Palermo</div>
+  <p class="footer-note">Via Vittorio Emanuele, 492 · Palazzo Asmundo (1615–1767)<br>Palermo, Sicilia · Italia</p>
+</section>
+
+<script>
+function setLang(lang) {
+  document.body.classList.remove('it','en');
+  document.body.classList.add(lang);
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.lang-btn[onclick="setLang(\''+lang+'\')"]').classList.add('active');
+}
+// Default IT
+document.body.classList.add('it');
+</script>
+</body>
+</html>
