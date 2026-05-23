@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Suite Deluxe · Vista Cattedrale — Suite Cathedral Palermo</title>
-<meta name="description" content="Suite Deluxe a Palermo, 55 m² con vista sulla Cattedrale. Camera separata, cucina, salotto. Per famiglie e soggiorni di charme. Da €139/notte." />
+<title>Suite Deluxe · Cathedral View — Suite Cathedral Palermo</title>
+<meta name="description" content="Suite Deluxe in Palermo, 55 m² with Cathedral view. Separate bedroom, kitchen, living room. For families and luxury stays. From €139/night." />
 
-<meta property="og:title" content="Suite Deluxe · Vista Cattedrale — Suite Cathedral Palermo" />
-<meta property="og:description" content="Suite elegante di 55 m² nel centro storico di Palermo, vista Cattedrale. Camera, salotto, cucina." />
+<meta property="og:title" content="Suite Deluxe · Cathedral View — Suite Cathedral Palermo" />
+<meta property="og:description" content="Elegant 55 m² suite in Palermo's old town, Cathedral view. Bedroom, living, kitchen." />
 <meta property="og:image" content="https://infodany87-code.github.io/loft.jpg" />
 <meta property="og:type" content="website" />
 
@@ -16,15 +16,10 @@
   "@context": "https://schema.org",
   "@type": "Accommodation",
   "name": "Suite Deluxe · Suite Cathedral Palermo",
-  "description": "Suite di 55 m² con camera separata, salotto e cucina. Vista Cattedrale. Capacità 4 ospiti.",
+  "description": "55 m² suite with separate bedroom, living room and kitchen. Cathedral view. Capacity 4 guests.",
   "image": "https://infodany87-code.github.io/loft.jpg",
   "occupancy": { "@type": "QuantitativeValue", "maxValue": 4 },
-  "floorSize": { "@type": "QuantitativeValue", "value": 55, "unitCode": "MTK" },
-  "amenityFeature": [
-    {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Cucina attrezzata", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Vista Cattedrale", "value": true}
-  ]
+  "floorSize": { "@type": "QuantitativeValue", "value": 55, "unitCode": "MTK" }
 }
 </script>
 
@@ -33,31 +28,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --ivory: #f5efe2;
-  --ivory-deep: #ede4d1;
-  --ink: #1d1812;
-  --ink-soft: #4a3f33;
-  --terracotta: #a8442a;
-  --terracotta-dark: #8a3520;
-  --gold: #b08144;
-  --gold-soft: #c9a574;
-  --line: rgba(29, 24, 18, 0.12);
-}
-
+:root { --ivory: #f5efe2; --ivory-deep: #ede4d1; --ink: #1d1812; --ink-soft: #4a3f33; --terracotta: #a8442a; --terracotta-dark: #8a3520; --gold: #b08144; --gold-soft: #c9a574; --line: rgba(29, 24, 18, 0.12); }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--ivory); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-
-header {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 16px 32px;
-  display: flex; justify-content: space-between; align-items: center;
-  background: rgba(245, 239, 226, 0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
-}
+header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; background: rgba(245, 239, 226, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--ink); text-decoration: none; }
 .logo span { display: block; font-size: 10px; letter-spacing: 0.3em; font-family: 'DM Sans', sans-serif; text-transform: uppercase; margin-top: 2px; opacity: 0.7; }
 .header-right { display: flex; gap: 24px; align-items: center; }
@@ -65,12 +41,7 @@ header {
 .lang-switch a { background: none; border: none; color: var(--ink); cursor: pointer; padding: 4px 6px; font-family: inherit; font-size: inherit; opacity: 0.5; text-decoration: none; }
 .lang-switch a.active { opacity: 1; border-bottom: 1px solid currentColor; }
 .lang-switch .sep { opacity: 0.3; }
-.header-cta {
-  display: inline-flex; align-items: center; gap: 8px;
-  color: var(--ink); font-size: 13px; letter-spacing: 0.05em;
-  text-decoration: none; border: 1px solid var(--ink);
-  padding: 8px 16px; border-radius: 100px; transition: all 0.3s;
-}
+.header-cta { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 13px; letter-spacing: 0.05em; text-decoration: none; border: 1px solid var(--ink); padding: 8px 16px; border-radius: 100px; transition: all 0.3s; }
 .header-cta:hover { background: var(--terracotta); color: var(--ivory); border-color: var(--terracotta); }
 
 .breadcrumb { padding: 100px 0 24px; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-soft); }
@@ -80,43 +51,14 @@ header {
 .breadcrumb .current { color: var(--ink); }
 
 .detail-hero { padding: 0 0 40px; }
-.detail-hero-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 12px;
-  height: 70vh;
-  min-height: 520px;
-}
-@media (max-width: 900px) {
-  .detail-hero-grid { grid-template-columns: 1fr; grid-template-rows: 60vh auto; height: auto; }
-  .detail-hero-grid .hero-thumb { display: none; }
-  .detail-hero-grid .hero-thumb:first-of-type { display: block; height: 200px; }
-}
-
-.hero-main {
-  grid-row: 1 / 3;
-  background-image: url('https://infodany87-code.github.io/loft.jpg');
-  background-size: cover; background-position: left center;
-  filter: hue-rotate(-8deg) saturate(1.1);
-  position: relative; overflow: hidden;
-}
+.detail-hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; height: 70vh; min-height: 520px; }
+@media (max-width: 900px) { .detail-hero-grid { grid-template-columns: 1fr; grid-template-rows: 60vh auto; height: auto; } .detail-hero-grid .hero-thumb { display: none; } .detail-hero-grid .hero-thumb:first-of-type { display: block; height: 200px; } }
+.hero-main { grid-row: 1 / 3; background-image: url('https://infodany87-code.github.io/loft.jpg'); background-size: cover; background-position: left center; filter: hue-rotate(-8deg) saturate(1.1); position: relative; overflow: hidden; }
 .hero-thumb { background: var(--ivory-deep); position: relative; overflow: hidden; }
 .hero-thumb.t1 { background-image: url('https://infodany87-code.github.io/loft.jpg'); background-size: cover; background-position: right; }
 .hero-thumb.t2 { background-image: url('https://infodany87-code.github.io/loft.jpg'); background-size: cover; background-position: center; filter: brightness(0.92); }
-
-.hero-thumb .label {
-  position: absolute; bottom: 12px; left: 12px;
-  background: rgba(245, 239, 226, 0.9);
-  padding: 4px 10px; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft);
-}
-
-.gallery-cta {
-  position: absolute; bottom: 20px; right: 20px;
-  background: var(--ivory); color: var(--ink);
-  padding: 10px 18px; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none;
-  border: 1px solid var(--ink); display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;
-}
+.hero-thumb .label { position: absolute; bottom: 12px; left: 12px; background: rgba(245, 239, 226, 0.9); padding: 4px 10px; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); }
+.gallery-cta { position: absolute; bottom: 20px; right: 20px; background: var(--ivory); color: var(--ink); padding: 10px 18px; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--ink); display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; }
 .gallery-cta:hover { background: var(--ink); color: var(--ivory); }
 
 .title-block { padding: 60px 0 80px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 80px; align-items: end; }
@@ -125,20 +67,17 @@ header {
 .title-block .eyebrow::before { content: ""; width: 40px; height: 1px; background: var(--terracotta); }
 .title-block h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 7vw, 88px); font-weight: 400; line-height: 0.95; letter-spacing: -0.02em; }
 .title-block h1 em { font-style: italic; color: var(--terracotta); }
-
 .quick-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 32px; padding-bottom: 8px; }
 .quick-facts .fact .label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px; }
 .quick-facts .fact .value { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500; }
 
 .detail-body { display: grid; grid-template-columns: 1.5fr 1fr; gap: 80px; padding-bottom: 120px; }
 @media (max-width: 900px) { .detail-body { grid-template-columns: 1fr; gap: 48px; } }
-
 .detail-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 500; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.01em; }
 .detail-content h2 em { font-style: italic; color: var(--terracotta); }
 .detail-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500; margin: 40px 0 16px; }
 .detail-content p { color: var(--ink-soft); margin-bottom: 16px; font-size: 16px; }
 .detail-content .pullquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; line-height: 1.4; color: var(--ink); padding: 24px 0 24px 24px; border-left: 2px solid var(--gold); margin: 32px 0; }
-
 .amenity-group { margin-top: 32px; }
 .amenity-group h4 { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 16px; font-weight: 600; }
 .amenity-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; list-style: none; }
@@ -150,20 +89,17 @@ header {
 .booking-widget .price .from { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-soft); margin-right: 4px; font-family: 'DM Sans', sans-serif; }
 .booking-widget .price .amount { font-size: 44px; line-height: 1; color: var(--ink); }
 .booking-widget .price .per { font-size: 14px; color: var(--ink-soft); font-family: 'DM Sans', sans-serif; }
-
 .booking-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
 .field { display: flex; flex-direction: column; gap: 4px; border: 1px solid var(--line); background: var(--ivory); padding: 10px 14px; }
 .field label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-soft); }
 .field input, .field select { border: none; background: transparent; font-family: inherit; font-size: 15px; color: var(--ink); outline: none; padding: 2px 0; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 24px; background: var(--ink); color: var(--ivory); text-decoration: none; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; border: 1px solid var(--ink); cursor: pointer; transition: all 0.3s; width: 100%; font-family: 'DM Sans', sans-serif; font-weight: 500; }
 .btn:hover { background: var(--terracotta); border-color: var(--terracotta); }
 .btn-primary { background: var(--terracotta); border-color: var(--terracotta); }
 .btn-primary:hover { background: var(--terracotta-dark); border-color: var(--terracotta-dark); }
 .btn-ghost { background: transparent; color: var(--ink); margin-top: 8px; }
 .btn-ghost:hover { background: var(--ink); color: var(--ivory); }
-
 .booking-widget .perks { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 12px; }
 .booking-widget .perks div { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; color: var(--ink-soft); }
 .booking-widget .perks svg { color: var(--terracotta); flex-shrink: 0; }
@@ -222,12 +158,12 @@ footer a:hover { color: var(--gold-soft); }
 <body>
 
 <header>
-  <a href="index.html" class="logo">Suite Cathedral<span>Palermo</span></a>
+  <a href="index-en.html" class="logo">Suite Cathedral<span>Palermo</span></a>
   <div class="header-right">
     <div class="lang-switch">
-      <a href="suite-deluxe.html" class="active">IT</a>
+      <a href="suite-deluxe.html">IT</a>
       <span class="sep">/</span>
-      <a href="suite-deluxe-en.html">EN</a>
+      <a href="suite-deluxe-en.html" class="active">EN</a>
     </div>
     <a href="https://wa.me/393282431315" class="header-cta">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
@@ -238,9 +174,9 @@ footer a:hover { color: var(--gold-soft); }
 
 <div class="container">
   <div class="breadcrumb">
-    <a href="index.html">Home</a>
+    <a href="index-en.html">Home</a>
     <span class="sep">/</span>
-    <a href="index.html#accommodations">Sistemazioni</a>
+    <a href="index-en.html#accommodations">Stays</a>
     <span class="sep">/</span>
     <span class="current">Suite Deluxe</span>
   </div>
@@ -251,16 +187,12 @@ footer a:hover { color: var(--gold-soft); }
     <div class="detail-hero-grid">
       <div class="hero-main">
         <a href="#gallery" class="gallery-cta">
-          Vedi tutte le foto
+          See all photos
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
         </a>
       </div>
-      <div class="hero-thumb t1">
-        <div class="label">Salotto</div>
-      </div>
-      <div class="hero-thumb t2">
-        <div class="label">Cucina · zona pranzo</div>
-      </div>
+      <div class="hero-thumb t1"><div class="label">Living room</div></div>
+      <div class="hero-thumb t2"><div class="label">Kitchen · dining</div></div>
     </div>
   </div>
 </section>
@@ -270,13 +202,13 @@ footer a:hover { color: var(--gold-soft); }
     <div class="title-block">
       <div>
         <div class="eyebrow">Suite Deluxe</div>
-        <h1>Spazio, <em>eleganza</em><br/>e una vista che<br/>non smette di stupire.</h1>
+        <h1>Space, <em>elegance</em>,<br/>and a view that<br/>never stops surprising.</h1>
       </div>
       <div class="quick-facts">
-        <div class="fact"><div class="label">Dimensione</div><div class="value">55 m²</div></div>
-        <div class="fact"><div class="label">Ospiti</div><div class="value">Fino a 4</div></div>
-        <div class="fact"><div class="label">Letti</div><div class="value">1 king + 1 divano</div></div>
-        <div class="fact"><div class="label">Ambienti</div><div class="value">Camera · Living · Cucina</div></div>
+        <div class="fact"><div class="label">Size</div><div class="value">55 m²</div></div>
+        <div class="fact"><div class="label">Guests</div><div class="value">Up to 4</div></div>
+        <div class="fact"><div class="label">Beds</div><div class="value">1 king + 1 sofa</div></div>
+        <div class="fact"><div class="label">Rooms</div><div class="value">Bedroom · Living · Kitchen</div></div>
       </div>
     </div>
   </div>
@@ -287,78 +219,78 @@ footer a:hover { color: var(--gold-soft); }
     <div class="detail-body">
 
       <div class="detail-content">
-        <h2>La sistemazione <em>più ampia</em>, per chi vuole vivere Palermo con calma.</h2>
-        <p>La Suite Deluxe occupa un intero appartamento storico, con camera da letto matrimoniale separata, un ampio salotto con divano letto, e una cucina completamente attrezzata. Ideale per famiglie, piccoli gruppi di amici, o coppie che vogliono più spazio e privacy.</p>
-        <p>Soffitti alti, pavimenti originali in cementine siciliane, finestre affacciate sulla Cattedrale e arredi che mescolano pezzi d'epoca a un design contemporaneo. Tutto curato nei minimi dettagli, dalla qualità dei materassi alla biancheria di lino.</p>
+        <h2>The <em>largest stay</em>, for those who want to take their time in Palermo.</h2>
+        <p>The Suite Deluxe occupies an entire historic apartment, with a separate double bedroom, a spacious living room with sofa bed, and a fully equipped kitchen. Ideal for families, small groups of friends, or couples who want more space and privacy.</p>
+        <p>High ceilings, original Sicilian cement tile floors, windows facing the Cathedral and furnishings that blend vintage pieces with contemporary design. Every detail is considered, from mattress quality to linen sheets.</p>
 
-        <p class="pullquote">"Più di una stanza d'albergo, meno impegnativo di una casa. È perfetta."</p>
+        <p class="pullquote">"More than a hotel room, less of a commitment than a house. It's perfect."</p>
 
-        <h3>Servizi inclusi</h3>
+        <h3>Included services</h3>
 
         <div class="amenity-group">
-          <h4>Camera & living</h4>
+          <h4>Bedroom & living</h4>
           <ul class="amenity-list">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Letto king-size 180 cm</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Divano letto matrimoniale</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Aria condizionata in ogni stanza</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Doppi vetri insonorizzati</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Tavolo da pranzo per 4 persone</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Postazione lavoro / scrivania</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Cassaforte digitale</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Biancheria di lino</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> King-size bed (180 cm)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Double sofa bed</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> A/C in every room</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Soundproof double glazing</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Dining table for 4</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Workstation / desk</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Digital safe</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Linen sheets</li>
           </ul>
         </div>
 
         <div class="amenity-group">
-          <h4>Cucina attrezzata</h4>
+          <h4>Fully equipped kitchen</h4>
           <ul class="amenity-list">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Piano cottura a induzione</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Frigorifero / freezer</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Forno e microonde</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Lavastoviglie</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Macchina caffè + bollitore</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Stoviglie e utensili completi</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Induction cooktop</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Fridge / freezer</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Oven and microwave</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Dishwasher</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Coffee machine + kettle</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Complete dinnerware and utensils</li>
           </ul>
         </div>
 
         <div class="amenity-group">
-          <h4>Tecnologia</h4>
+          <h4>Tech</h4>
           <ul class="amenity-list">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Wi-Fi fibra ottica 200 Mbps</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Smart TV 50" con streaming</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Fibre Wi-Fi 200 Mbps</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 50" Smart TV with streaming</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Bluetooth speaker</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Prese USB e USB-C</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> USB and USB-C sockets</li>
           </ul>
         </div>
 
         <div class="amenity-group">
-          <h4>Bagno</h4>
+          <h4>Bathroom</h4>
           <ul class="amenity-list">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Doccia walk-in con soffione pioggia</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Set cortesia con prodotti naturali</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Accappatoio e pantofole</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Lavatrice in dotazione</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Walk-in rain shower</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Natural-product toiletries</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Bathrobes and slippers</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Washing machine included</li>
           </ul>
         </div>
 
         <div class="amenity-group">
-          <h4>Servizi extra</h4>
+          <h4>Extra services</h4>
           <ul class="amenity-list">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Cesto di benvenuto siciliano</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Bottiglia di vino in regalo</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Pulizia intermedia su richiesta</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Culla disponibile gratis</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Tour personalizzati (a pagamento)</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Transfer aeroporto su richiesta</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Sicilian welcome basket</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Complimentary bottle of wine</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Mid-stay cleaning on request</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free crib available</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Tailored tours (paid)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Airport transfer on request</li>
           </ul>
         </div>
       </div>
 
       <aside class="booking-widget">
         <div class="price">
-          <span class="from">Da</span>
+          <span class="from">From</span>
           <span class="amount">€139</span>
-          <span class="per">/ notte</span>
+          <span class="per">/ night</span>
         </div>
 
         <div class="booking-form">
@@ -373,39 +305,23 @@ footer a:hover { color: var(--gold-soft); }
             </div>
           </div>
           <div class="field">
-            <label>Ospiti</label>
+            <label>Guests</label>
             <select>
-              <option>2 ospiti</option>
-              <option>3 ospiti</option>
-              <option selected>4 ospiti</option>
+              <option>2 guests</option>
+              <option>3 guests</option>
+              <option selected>4 guests</option>
             </select>
           </div>
         </div>
 
-        <a href="https://wa.me/393282431315" class="btn btn-primary">
-          Prenota su WhatsApp
-        </a>
-        <a href="https://www.booking.com/Share-DdfwDq" class="btn btn-ghost">
-          Vedi su Booking
-        </a>
+        <a href="https://wa.me/393282431315" class="btn btn-primary">Book on WhatsApp</a>
+        <a href="https://www.booking.com/Share-DdfwDq" class="btn btn-ghost">See on Booking</a>
 
         <div class="perks">
-          <div>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            Miglior prezzo prenotando diretto
-          </div>
-          <div>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            Pagamento in struttura
-          </div>
-          <div>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            Cancellazione flessibile
-          </div>
-          <div>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            Sconto 10% oltre 5 notti
-          </div>
+          <div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Best price when booking direct</div>
+          <div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Pay on arrival</div>
+          <div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Flexible cancellation</div>
+          <div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 10% off for stays over 5 nights</div>
         </div>
       </aside>
 
@@ -419,27 +335,27 @@ footer a:hover { color: var(--gold-soft); }
       <div class="spec">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18"/><path d="M3 9h18M9 3v18"/></svg>
         <div class="value">55 m²</div>
-        <div class="label">Superficie</div>
+        <div class="label">Surface</div>
       </div>
       <div class="spec">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/></svg>
         <div class="value">4</div>
-        <div class="label">Ospiti max</div>
+        <div class="label">Max guests</div>
       </div>
       <div class="spec">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 12h20M2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6M4 12V8a2 2 0 012-2h12a2 2 0 012 2v4"/></svg>
         <div class="value">3</div>
-        <div class="label">Ambienti</div>
+        <div class="label">Rooms</div>
       </div>
       <div class="spec">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 12h18M3 8h18M3 16h12"/></svg>
-        <div class="value">Sì</div>
-        <div class="label">Cucina completa</div>
+        <div class="value">Yes</div>
+        <div class="label">Full kitchen</div>
       </div>
       <div class="spec">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <div class="value">Vista</div>
-        <div class="label">Cattedrale</div>
+        <div class="value">View</div>
+        <div class="label">Cathedral</div>
       </div>
     </div>
   </div>
@@ -447,35 +363,35 @@ footer a:hover { color: var(--gold-soft); }
 
 <section class="house-rules">
   <div class="container">
-    <h2>Informazioni <em>pratiche</em>.</h2>
+    <h2>Useful <em>info</em>.</h2>
 
     <div class="rules-grid">
       <div class="rule">
-        <h4>Check-in & Check-out</h4>
+        <h4>Check-in & check-out</h4>
         <ul>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Check-in dalle 15:00 alle 24:00</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Codice digitale, anche oltre la mezzanotte</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Check-out entro le 11:00</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Late check-out a pagamento</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Check-in from 3 PM to midnight</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Digital code, after midnight too</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Check-out by 11 AM</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Late check-out at extra cost</li>
         </ul>
       </div>
       <div class="rule">
-        <h4>Regole della casa</h4>
+        <h4>House rules</h4>
         <ul>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Adatta a bambini</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-with="2"></svg> Culla gratis su richiesta</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Non si fuma all'interno</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Animali non ammessi</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Silenzio dalle 23:00</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Family friendly</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free crib on request</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> No smoking inside</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> No pets allowed</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Quiet hours from 11 PM</li>
         </ul>
       </div>
       <div class="rule">
-        <h4>Pagamento e cancellazione</h4>
+        <h4>Payment & cancellation</h4>
         <ul>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Cancellazione gratuita fino a 7 gg</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Caparra 20% alla prenotazione</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Saldo in struttura</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Tassa di soggiorno €3/persona/notte</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free cancellation up to 7 days</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 20% deposit at booking</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Balance paid on arrival</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> City tax €3/person/night</li>
         </ul>
       </div>
     </div>
@@ -484,19 +400,19 @@ footer a:hover { color: var(--gold-soft); }
 
 <section class="cross-sell">
   <div class="container">
-    <div class="eyebrow">Anche disponibile</div>
-    <h2>Viaggi in <em>due</em>?</h2>
+    <div class="eyebrow">Also available</div>
+    <h2>Travelling as a <em>couple</em>?</h2>
 
     <div class="cross-card">
       <div class="cross-card-img"></div>
       <div class="cross-card-body">
-        <div class="room-sub">Vista Cattedrale · 35 m²</div>
+        <div class="room-sub">Cathedral view · 35 m²</div>
         <h3>Loft <em>Superior</em></h3>
-        <p>Spazio aperto e luminoso, con finestra affacciata sulla Cattedrale. Comfort moderno e posizione centralissima. La scelta ideale per coppie che vogliono il cuore di Palermo a portata di mano.</p>
+        <p>Open-plan and light-filled, with a window facing the Cathedral. Modern comfort and a central location. The ideal choice for couples who want Palermo's old town at their fingertips.</p>
         <div class="cross-footer">
-          <div class="price-mini">€89<span>/notte</span></div>
-          <a href="loft-superior.html" class="btn btn-ghost" style="width: auto;">
-            Scopri il Loft
+          <div class="price-mini">€89<span>/night</span></div>
+          <a href="loft-superior-en.html" class="btn btn-ghost" style="width: auto;">
+            Discover the Loft
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -509,18 +425,18 @@ footer a:hover { color: var(--gold-soft); }
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">Suite Cathedral<span>Palermo</span></a>
-        <p>Appartamenti di charme nel centro storico di Palermo, davanti alla Cattedrale. Un'esperienza autentica nel cuore della Sicilia.</p>
+        <a href="index-en.html" class="logo">Suite Cathedral<span>Palermo</span></a>
+        <p>Boutique apartments in Palermo's historic centre, facing the Cathedral. An authentic experience in the heart of Sicily.</p>
       </div>
       <div>
-        <h5>Alloggi</h5>
+        <h5>Stays</h5>
         <ul>
-          <li><a href="loft-superior.html">Loft Superior</a></li>
-          <li><a href="suite-deluxe.html">Suite Deluxe</a></li>
+          <li><a href="loft-superior-en.html">Loft Superior</a></li>
+          <li><a href="suite-deluxe-en.html">Suite Deluxe</a></li>
         </ul>
       </div>
       <div>
-        <h5>Contatti</h5>
+        <h5>Contact</h5>
         <ul>
           <li><a href="https://wa.me/393282431315">WhatsApp</a></li>
           <li><a href="mailto:info@suitecathedral.com">Email</a></li>
@@ -528,15 +444,15 @@ footer a:hover { color: var(--gold-soft); }
         </ul>
       </div>
       <div>
-        <h5>Prenota</h5>
+        <h5>Book</h5>
         <ul>
-          <li><a href="https://wa.me/393282431315">Diretto (miglior prezzo)</a></li>
+          <li><a href="https://wa.me/393282431315">Direct (best rate)</a></li>
           <li><a href="https://www.booking.com/Share-DdfwDq">Booking.com</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Suite Cathedral Palermo · CIN da inserire · P.IVA da inserire</span>
+      <span>© 2026 Suite Cathedral Palermo · CIN to be added · VAT to be added</span>
       <span>Made with care in Palermo</span>
     </div>
   </div>
